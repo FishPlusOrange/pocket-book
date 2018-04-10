@@ -6,72 +6,36 @@ Good good study, day day up.
 
 ## Table of Contents
 
-### Table 1
+### About Vue
 
-Introduction.
-
-<details>
-
-<summary>View contents</summary>
-
-- [Title 1-1](#title-1-1)
-- [Title 1-2](#title-1-2)
-- [Title 1-3](#title-1-3)
-
-</details>
-
-### Table 2
-
-Introduction.
+关于 Vue。
 
 <details>
 
 <summary>View contents</summary>
 
-- [Title 2](#title-2)
-
-</details>
-
-### Table 3
-
-Introduction.
-
-<details>
-
-<summary>View contents</summary>
-
-- [Title 3](#title-3)
+- [Vuex 使用 commit 提交 mutation 修改 state 的原因](#vuex-使用-commit-提交-mutation-修改-state-的原因)
 
 </details>
 
 ## Contents
 
-### Table 1
+### About Vue
 
-#### Title 1-1
+#### Vuex 使用 commit 提交 mutation 修改 state 的原因
 
-[Back to TOC](#table-of-contents)
+首先，[Vuex 官方文档](https://vuex.vuejs.org/zh-cn/mutations.html)表示：
 
-#### Title 1-2
+> 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。
 
-[Back to TOC](#table-of-contents)
+但是在开发过程中发现直接修改 state 也是可行的，所以二者有什么区别呢。
 
-#### Title 1-3
+Vuex 提供**严格模式**，查看源码发现，`commit` 函数内部通过 `_withCommit` 函数和 `_withCommit` 函数内部的 `_committing` 状态值来修改 state。而严格模式下由 `enableStrictMode` 函数通过观察 `_committing` 状态值，如果非 true 则调用 `assert` 函数抛出错误 **“Do not mutate vuex store state outside mutation handlers”**。
 
-[Back to TOC](#table-of-contents)
+所以如果不使用 commit 提交 mutation 修改 state，那么在严格模式下就会报错。更重要是，[Vuex 官方文档](https://vuex.vuejs.org/zh-cn/strict.html)还表示：
 
----
+> 在严格模式下，无论何时发生了状态变更且不是由 mutation 函数引起的，将会抛出错误。这能保证所有的状态变更都能被调试工具跟踪到。
 
-### Table 2
-
-#### Title 2
-
-[Back to TOC](#table-of-contents)
-
----
-
-### Table 3
-
-#### Title 3
+**故直接修改 state 所发生的状态变更无法被 Vue 调试工具 vue-devtools 跟踪到**。
 
 [Back to TOC](#table-of-contents)
