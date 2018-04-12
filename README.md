@@ -18,6 +18,18 @@ Good good study, day day up.
 
 </details>
 
+### About Browser Compatibility
+
+关于浏览器兼容性。
+
+<details>
+
+<summary>View contents</summary>
+
+- [低版本 IE 浏览器下绝对定位的元素未设置背景时无法响应鼠标点击或悬浮事件](#低版本-ie-浏览器下绝对定位的元素未设置背景时无法响应鼠标点击或悬浮事件)
+
+</details>
+
 ## Contents
 
 ### About Vue
@@ -37,5 +49,27 @@ Vuex 提供**严格模式**，查看源码发现，`commit` 函数内部通过 `
 > 在严格模式下，无论何时发生了状态变更且不是由 mutation 函数引起的，将会抛出错误。这能保证所有的状态变更都能被调试工具跟踪到。
 
 **故直接修改 state 所发生的状态变更无法被 Vue 调试工具 vue-devtools 跟踪到**。
+
+[Back to TOC](#table-of-contents)
+
+### About Browser Compatibility
+
+#### 低版本 IE 浏览器下绝对定位的元素未设置背景时无法响应鼠标点击或悬浮事件
+
+推荐的解决方案是通过设置 background 属性 hack：
+
+```css
+div {
+    background: url(about:blank);
+}
+```
+
+其他解决方案：
+
+- 不使用绝对定位
+ 
+- 添加背景色
+ 
+- 添加透明背景图片
 
 [Back to TOC](#table-of-contents)
