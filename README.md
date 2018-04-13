@@ -27,6 +27,7 @@ Good good study, day day up.
 <summary>View contents</summary>
 
 - [低版本 IE 浏览器下绝对定位的元素未设置背景时无法响应鼠标点击或悬浮事件](#低版本-ie-浏览器下绝对定位的元素未设置背景时无法响应鼠标点击或悬浮事件)
+- [IE 浏览器下 iframe 弹窗中输入框光标丢失（无法输入）问题](#ie-浏览器下-iframe-弹窗中输入框光标丢失无法输入问题)
 
 </details>
 
@@ -71,5 +72,30 @@ div {
 - 添加背景色
  
 - 添加透明背景图片
+
+[Back to TOC](#table-of-contents)
+
+#### IE 浏览器下 iframe 弹窗中输入框光标丢失（无法输入）问题
+
+在开发过程中遇到这样一个问题，IE 浏览器下弹出一个 iframe 弹窗，第一次可以正常获得输入框焦点，关闭弹窗后再打开（未刷新页面），无法获得输入框焦点，即无法输入。
+
+网上查到一种方法，通过 IE 特有的方法 `CollectGarbage()` 来回收内存，经尝试问题依然没有得到解决。
+
+个人理解造成该问题的主要原因是，IE 浏览器下在关闭（移除）弹窗（iframe 外层容器）时，iframe 并没有从 DOM 中移除，导致再打开弹窗时 DOM 冲突。经研究，主要有两种解决方案：
+
+1. 在移除弹窗时，先移除 iframe：
+
+```javascript
+// window.parent.document 表示跨 iframe 操作父页面元素
+$('iframe', window.parent.document).remove();
+```
+
+2. 每次打开弹窗时，手动获得输入框焦点：
+
+```javascript
+$('input').focus();
+```
+
+本人解决该问题时采用方案二，因为在实际解决过程中发现方案一在 IE10 版本下（非仿真模式）不可行，所以推荐**方案二**。
 
 [Back to TOC](#table-of-contents)
