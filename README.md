@@ -29,6 +29,7 @@ Good good study, day day up.
 - [低版本 IE 浏览器下绝对定位的元素未设置背景时无法响应鼠标点击或悬浮事件](#低版本-ie-浏览器下绝对定位的元素未设置背景时无法响应鼠标点击或悬浮事件)
 - [IE 浏览器下 iframe 弹窗中输入框光标丢失（无法输入）问题](#ie-浏览器下-iframe-弹窗中输入框光标丢失无法输入问题)
 - [低版本 IE 浏览器无法触发 oninput 事件](#低版本-ie-浏览器无法触发-oninput-事件)
+- [IE9 浏览器下在拖拽、剪切、删除操作时无法触发 propertychange 事件](#ie9-浏览器下在拖拽剪切删除操作时无法触发-propertychange-事件)
 
 </details>
 
@@ -101,7 +102,7 @@ $('input').focus();
 
 [Back to TOC](#table-of-contents)
 
-#### 低版本 IE 浏览器无法触发 oninput 事件
+#### 低版本 IE 浏览器下无法触发 oninput 事件
 
 `oninput` 用于实时监听输入框 value 变化，不同于 `onchange` 事件要在值改变且失去焦点时触发。
 
@@ -114,5 +115,26 @@ $('input').focus();
 - `oninput` 在 value 改变时实时触发（通过 js 改变 value 不触发），`onpropertychange` 在任何属性改变时均会触发。
 
 - 在 JS 事件动态绑定方式上，`oninput` 可通过普通事件绑定方式和 `addEventListener` 注册。`onpropertychange` 只能通过普通事件绑定方式，所以在 jQuery 中其不能通过事件委托的方式绑定事件。
+
+[Back to TOC](#table-of-contents)
+
+#### IE9 浏览器下在拖拽、剪切、删除操作时无法触发 propertychange 事件
+
+可在获得输入框焦点时设置定时器周期性触发 `propertychange` 事件以兼容该问题：
+
+```javascript
+$('input').each(function() {
+    var $this = $(this);
+    var _interval;
+    $this.focus(function() {
+        _interval = setInterval(function() {
+            $this.trigger('propertychange');
+        }, 300);
+    });
+    $this.blur(function() {
+        clearInterval(_interval);
+    });
+});
+```
 
 [Back to TOC](#table-of-contents)
