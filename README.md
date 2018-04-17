@@ -30,6 +30,7 @@ Good good study, day day up.
 - [IE 浏览器下 iframe 弹窗中输入框光标丢失（无法输入）问题](#ie-浏览器下-iframe-弹窗中输入框光标丢失无法输入问题)
 - [低版本 IE 浏览器无法触发 oninput 事件](#低版本-ie-浏览器无法触发-oninput-事件)
 - [IE9 浏览器下在拖拽、剪切、删除操作时无法触发 propertychange 事件](#ie9-浏览器下在拖拽剪切删除操作时无法触发-propertychange-事件)
+- [IE 浏览器下请求路径带中文参数发送 GET 请求报400错误](#ie-浏览器下请求路径带中文参数发送-get-请求报400错误)
 
 </details>
 
@@ -135,6 +136,17 @@ $('input').each(function() {
         clearInterval(_interval);
     });
 });
+```
+
+[Back to TOC](#table-of-contents)
+
+#### IE 浏览器下请求路径带中文参数发送 GET 请求报400错误
+
+可通过 `encodeURI` 函数对中文参数进行编码：
+
+```javascript
+// url 为请求路径
+window.location.href = url + '?params=' + encodeURI(params);
 ```
 
 [Back to TOC](#table-of-contents)
