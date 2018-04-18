@@ -31,6 +31,7 @@ Good good study, day day up.
 - [低版本 IE 浏览器无法触发 oninput 事件](#低版本-ie-浏览器无法触发-oninput-事件)
 - [IE9 浏览器下在拖拽、剪切、删除操作时无法触发 propertychange 事件](#ie9-浏览器下在拖拽剪切删除操作时无法触发-propertychange-事件)
 - [IE 浏览器下请求路径带中文参数发送 GET 请求报400错误](#ie-浏览器下请求路径带中文参数发送-get-请求报400错误)
+- [IE 浏览器下由于请求路径过长导致发送 GET 请求时报500错误](#ie-浏览器下由于请求路径过长导致发送-get-请求时报500错误)
 
 </details>
 
@@ -147,6 +148,74 @@ $('input').each(function() {
 ```javascript
 // url 为请求路径
 window.location.href = url + '?params=' + encodeURI(params);
+```
+
+[Back to TOC](#table-of-contents)
+
+#### IE 浏览器下由于请求路径过长导致发送 GET 请求时报500错误
+
+开发过程中通过 GET 请求下载或者导出文件：
+
+1. 通过 `window.open` 打开新窗口跳转请求：
+
+```javascript
+// url 为请求路径
+window.open(url + '?params=' + encodeURI(params));
+```
+
+2. 通过 `window.location.href` 在本页面跳转请求：
+
+```javascript
+// url 为请求路径
+window.location.href = url + '?params=' + encodeURI(params);
+```
+
+3. 通过模拟 form 表单提交打开新窗口跳转请求：
+
+```javascript
+// url 为请求路径
+var form = document.createElement('form');
+form.target = '_blank';
+form.action = url;
+form.method = 'get';
+form.style.display = 'none';
+
+var opt = document.createElement('textarea');
+opt.name = 'params';
+opt.value = params;
+form.appendChild(opt);
+
+document.body.appendChild(form);
+form.submit();
+fotm.remove();
+```
+
+> 方法1和3可配置 `target` 属性（方法1的 `target` 属性默认为 `_blank`，方法3的 `target` 属性默认为 `_self`），方法2仅能在本页面跳转（等同于 a 标签且 `target` 属性为 `_self`）。开发过程中发现部分版本 IE 浏览器下，打开新窗口跳转请求下载完成后，新窗口无法自动关闭，可通过配置 `target` 属性为 `_self` 解决该问题。
+
+> 方法1和2使用 `encodeURI` 转码是因为 [IE 浏览器下请求路径带中文参数发送 GET 请求报400错误](#ie-浏览器下请求路径带中文参数发送-get-请求报400错误)。方法3不需要使用 `encodeURI` 转码是因为通过模拟 form 表单提交打开新窗口跳转请求会自动对中文参数进行转码。
+
+测试过程中发现部分情况下 IE 浏览器会报500错误。
+
+经研究，**IE 浏览器对最大请求路径长度进行了限制，限制长度为2048字节，这个限制对 POST 请求和 GET 请求的 URL 均适用**。因为 IE 浏览器下需要对请求路径中的中文参数进行转码，其可能导致请求路径长度超出限制，当发送 GET 请求时 IE 浏览器会报500错误。
+
+解决方案是使用 POST 请求：
+
+```javascript
+// url 为请求路径
+var form = document.createElement('form');
+form.target = '_blank';
+form.action = url;
+form.method = 'post'; // 把 GET 请求改成 POST 请求
+form.style.display = 'none';
+
+var opt = document.createElement('textarea');
+opt.name = 'params';
+opt.value = params;
+form.appendChild(opt);
+
+document.body.appendChild(form);
+form.submit();
+fotm.remove();
 ```
 
 [Back to TOC](#table-of-contents)
