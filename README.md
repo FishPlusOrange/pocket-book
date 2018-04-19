@@ -32,6 +32,7 @@ Good good study, day day up.
 - [IE9 浏览器下在拖拽、剪切、删除操作时无法触发 propertychange 事件](#ie9-浏览器下在拖拽剪切删除操作时无法触发-propertychange-事件)
 - [IE 浏览器下由于请求路径带中文参数导致发送 GET 请求时报400错误](#ie-浏览器下由于请求路径带中文参数导致发送-get-请求时报400错误)
 - [IE 浏览器下由于请求路径过长导致发送 GET 请求时报500错误](#ie-浏览器下由于请求路径过长导致发送-get-请求时报500错误)
+- [IE 浏览器下 td 边框消失](#ie-浏览器下-td-边框消失)
 
 </details>
 
@@ -217,5 +218,13 @@ document.body.appendChild(form);
 form.submit();
 fotm.remove();
 ```
+
+[Back to TOC](#table-of-contents)
+
+#### IE 浏览器下 td 边框消失
+
+导致 td 边框消失的原因是该标签同时存在 `position: relative;` 与 `background-color` 属性。
+
+推荐的解决方案是在该 td 下添加 div 并设置 `position: relative;` 把所有内容放在 div 中。
 
 [Back to TOC](#table-of-contents)
