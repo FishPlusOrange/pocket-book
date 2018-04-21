@@ -59,6 +59,8 @@ Vuex 提供**严格模式**，查看源码发现，`commit` 函数内部通过 `
 
 [Back to TOC](#table-of-contents)
 
+---
+
 ### About Browser Compatibility
 
 #### 低版本 IE 浏览器下绝对定位的元素未设置背景时无法响应鼠标点击或悬浮事件
@@ -234,7 +236,7 @@ fotm.remove();
 
 开发过程中，发现在 IE8 浏览器下通过 `new Date('YYYY-MM-DD')` 创建一个指定日期的 Date 对象，返回的却是 NaN：
 
-```
+```javascript
 // IE8 浏览器下
 var date = new Date('1994-04-05'); // NaN
 ```
