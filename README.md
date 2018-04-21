@@ -33,6 +33,7 @@ Good good study, day day up.
 - [IE 浏览器下由于请求路径带中文参数导致发送 GET 请求时报400错误](#ie-浏览器下由于请求路径带中文参数导致发送-get-请求时报400错误)
 - [IE 浏览器下由于请求路径过长导致发送 GET 请求时报500错误](#ie-浏览器下由于请求路径过长导致发送-get-请求时报500错误)
 - [IE 浏览器下 td 边框消失](#ie-浏览器下-td-边框消失)
+- [IE8 浏览器下 new Date('YYYY-MM-DD') 返回 NaN](#ie8-浏览器下-new-dateyyyy-mm-dd-返回-nan)
 
 </details>
 
@@ -226,5 +227,36 @@ fotm.remove();
 导致 td 边框消失的原因是该标签同时存在 `position: relative;` 与 `background-color` 属性。
 
 推荐的解决方案是在该 td 下添加 div 并设置 `position: relative;` 把所有内容放在 div 中。
+
+[Back to TOC](#table-of-contents)
+
+#### IE8 浏览器下 new Date('YYYY-MM-DD') 返回 NaN
+
+开发过程中，发现在 IE8 浏览器下通过 `new Date('YYYY-MM-DD')` 创建一个指定日期的 Date 对象，返回的却是 NaN：
+
+```
+// IE8 浏览器下
+var date = new Date('1994-04-05'); // NaN
+```
+
+在网上查找到了一个[解决方案](http://jibbering.com/faq/#parseDate)，即在 `new Date()` 前先调用 `parseISO8601` 方法：
+
+```javascript
+var date = new Date(parseISO8601('1994-04-05'));
+
+function parseISO8601(dateStringInRange) {  
+    var isoExp = /^\s*(\d{4})-(\d\d)-(\d\d)\s*$/,  
+        date = new Date(NaN), month,  
+        parts = isoExp.exec(dateStringInRange);  
+    if(parts) {  
+        month = +parts[2];  
+        date.setFullYear(parts[1], month - 1, parts[3]);  
+        if(month != date.getMonth() + 1) {  
+            date.setTime(NaN);  
+        }  
+    }  
+    return date;  
+} 
+```
 
 [Back to TOC](#table-of-contents)
