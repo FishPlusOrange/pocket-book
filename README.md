@@ -46,6 +46,7 @@ Good good study, day day up.
 <summary>View contents</summary>
 
 - [CSS3 -webkit-tap-highlight-color](#css3--webkit-tap-highlight-color)
+- [CSS3 -webkit-appearance](#css3--webkit-appearance)
 
 </details>
 
@@ -277,13 +278,28 @@ function parseISO8601(dateStringInRange) {
 
 #### CSS3 -webkit-tap-highlight-color
 
-在移动端开发过程中，发现一个问题：在 webkit 内核浏览器下，当点击一个链接时，其就会出现灰色背景高亮。
+在移动端开发过程中，发现一个问题：在 webkit 内核浏览器下，当点击一个链接时，其就会出现灰色高亮。
 
 该样式由属性 [`-webkit-tap-highlight-color`](http://www.css88.com/webkit/-webkit-tap-highlight-color) 控制，可通过设置透明度为0禁用该属性：
 
-```
+```css
 * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+```
+
+[Back to TOC](#table-of-contents)
+
+#### CSS3 -webkit-appearance
+
+在移动端开发过程中，发现一个问题：在 webkit 内核浏览器下，input 和 textarea 存在顶部内阴影。
+
+该样式由属性 [`-webkit-appearance`](http://www.css88.com/webkit/-webkit-appearance) 控制，可通过设置值为 none 去除该样式：
+
+```css
+input,
+textarea {
+    -webkit-appearance: none;
 }
 ```
 
