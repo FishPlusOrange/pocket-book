@@ -276,6 +276,10 @@ function parseISO8601(dateStringInRange) {
 
 [Back to TOC](#table-of-contents)
 
+---
+
+### About CSS
+
 #### CSS3 -webkit-tap-highlight-color
 
 在移动端开发过程中，发现一个问题：在 webkit 内核浏览器下，当点击一个链接时，其就会出现灰色高亮。
