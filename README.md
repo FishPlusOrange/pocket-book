@@ -37,6 +37,18 @@ Good good study, day day up.
 
 </details>
 
+### About CSS
+
+关于 CSS。
+
+<details>
+
+<summary>View contents</summary>
+
+- [CSS3 -webkit-tap-highlight-color](#css3--webkit-tap-highlight-color)
+
+</details>
+
 ## Contents
 
 ### About Vue
@@ -158,7 +170,7 @@ window.location.href = url + '?params=' + encodeURI(params);
 
 #### IE 浏览器下由于请求路径过长导致发送 GET 请求时报500错误
 
-开发过程中通过 GET 请求下载或者导出文件：
+开发过程中通过 GET 请求下载或导出文件：
 
 1. 通过 `window.open` 打开新窗口跳转请求：
 
@@ -260,5 +272,13 @@ function parseISO8601(dateStringInRange) {
     return date;  
 } 
 ```
+
+[Back to TOC](#table-of-contents)
+
+#### CSS3 -webkit-tap-highlight-color
+
+当点击一个链接，其就会出现一个灰色背景高亮。
+
+若要重设或禁用该样式，可通过设置属性 `-webkit-tap-highlight-color` 为相应颜色值或0。
 
 [Back to TOC](#table-of-contents)
