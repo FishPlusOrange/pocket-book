@@ -15,6 +15,7 @@ Good good study, day day up.
 <summary>View contents</summary>
 
 - [Vuex 使用 commit 提交 mutation 修改 state 的原因](#vuex-使用-commit-提交-mutation-修改-state-的原因)
+- [计算属性比较方法、侦听属性和过滤器](#计算属性比较方法侦听属性和过滤器)
 
 </details>
 
@@ -69,6 +70,143 @@ Vuex 提供**严格模式**，查看源码发现，`commit` 函数内部通过 `
 > 在严格模式下，无论何时发生了状态变更且不是由 mutation 函数引起的，将会抛出错误。这能保证所有的状态变更都能被调试工具跟踪到。
 
 **故直接修改 state 所发生的状态变更无法被 Vue 调试工具 vue-devtools 跟踪到**。
+
+[Back to TOC](#table-of-contents)
+
+#### 计算属性比较方法、侦听属性和过滤器
+
+Vue 使用了基于 HTML 的模板语法，在模板内我们一般只进行简单的数据处理。如果放入太多的逻辑会让模板过重且难以维护。所以，对于任何复杂逻辑，我们都应当使用[**计算属性**](https://cn.vuejs.org/v2/guide/computed.html)。
+
+举一个简单的计算属性例子（假设是复杂逻辑）：
+
+```html
+<body>
+    <div id="app">
+        <span>{{ info }}</span>
+    </div>
+</body>
+
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'FishPlusOrange',
+            age: 24
+        },
+        computed: {
+            info: function() {
+                return this.name + 'is' + this.age + 'years old.';
+            }
+        }
+    })
+</script>
+```
+
+其中 info 即为计算属性，该值始终取决于 data 中 name 和 age 的值，因此当 name 和 age 发生改变时，计算属性 info 也会响应式地更新。
+
+很多情况下我们发现计算属性（computed）能够实现的效果，通过方法（methods）、侦听属性（watch）和过滤器（filters）也分别能够实现。以下简单比较一下计算属性和它们的区别：
+
+- ##### 计算属性和方法
+
+以上计算属性例子通过方法实现：
+
+```
+<body>
+    <div id="app">
+        <span>{{ showInfo() }}</span>
+    </div>
+</body>
+
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'FishPlusOrange',
+            age: 24
+        },
+        methods: {
+            showInfo: function() {
+                return this.name + 'is' + this.age + 'years old.';
+            }
+        }
+    })
+</script>
+```
+
+通过计算属性和方法实现的最终结果是完全相同的。不同的是**计算属性是基于它们的依赖进行缓存的**。
+
+以上通过计算属性实现的例子中，只有当 name 和 age 发生改变时才会重新计算 info 的值，即只要 info 的相关依赖没有发生改变，多次访问 info 时将立即返回之前的计算结果，而不必再次执行 getter 函数。
+
+相比之下，通过方法实现的话，每当触发重新渲染时，总会再次执行相应函数。
+
+所以假设存在一个性能开销比较大的属性计算时，推荐使用计算属性。
+
+- ##### 计算属性和侦听属性
+
+以上计算属性例子通过侦听属性实现：
+
+```html
+<body>
+    <div id="app">
+        <span>{{ info }}</span>
+    </div>
+</body>
+
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'FishPlusOrange',
+            age: 24,
+            info: 'FishPlusOrange is 24 years old'
+        },
+        watch: {
+            name: function(val, oldVal) {
+                this.info = val + 'is' + this.age + 'years old.';
+            },
+            age: function(val, oldVal) {
+                this.info = this.name + 'is' + val + 'years old.';
+            }
+        }
+    })
+</script>
+```
+
+侦听属性中，当 name 和 age 发现改变时将重新计算 info 的值。但是，相比计算属性，代码是命令式且重复的。
+
+所以，如果仅仅是属性计算，一般使用计算属性。而在属性值改变后再执行其他操作时可以使用侦听属性。
+
+- ##### 计算属性和过滤器
+
+以上计算属性例子通过过滤器实现：
+
+```html
+<body>
+    <div id="app">
+        <span>{{ name | info }}</span>
+    </div>
+</body>
+
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'FishPlusOrange',
+            age: 24
+        },
+        filters: {
+            info: function(value) {
+                if(!value) return '';
+                return value + 'is' + this.age + 'years old.';
+            }
+        }
+    })
+</script>
+```
+
+过滤器虽然也可以实现以上计算属性例子的最终结果。但是，过滤器只能对 name 或 age 其中一个属性进行处理并返回相应结果。
+
+所以，过滤器一般用于处理单个属性值。
 
 [Back to TOC](#table-of-contents)
 
