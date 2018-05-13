@@ -110,7 +110,7 @@ Vue 使用了基于 HTML 的模板语法，在模板内我们一般只进行简�
 
 以上计算属性例子通过方法实现：
 
-```
+```html
 <body>
     <div id="app">
         <span>{{ showInfo() }}</span>
