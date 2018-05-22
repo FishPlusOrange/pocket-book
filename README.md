@@ -16,7 +16,7 @@ Good good study, day day up.
 
 - [Vuex 使用 commit 提交 mutation 修改 state 的原因](#vuex-使用-commit-提交-mutation-修改-state-的原因)
 - [计算属性比较方法、侦听属性和过滤器](#计算属性比较方法侦听属性和过滤器)
-- [在 vue-cli 项目中使用 Sass](在-vue-cli-项目中使用-sass)
+- [在 vue-cli 项目中使用 Sass](#在-vue-cli-项目中使用-sass)
 
 </details>
 
@@ -39,16 +39,16 @@ Good good study, day day up.
 
 </details>
 
-### About CSS
+### About Mobile Terminal Development
 
-关于 CSS。
+关于移动端开发。
 
 <details>
 
 <summary>View contents</summary>
 
-- [CSS3 -webkit-tap-highlight-color](#css3--webkit-tap-highlight-color)
-- [CSS3 -webkit-appearance](#css3--webkit-appearance)
+- [通过 CSS3 -webkit-tap-highlight-color 去除默认点击高亮](#通过-css3--webkit-tap-highlight-color-去除默认点击高亮)
+- [通过 CSS3 -webkit-appearance 去除输入框默认内阴影](#通过-css3--webkit-appearance-去除输入框默认内阴影)
 
 </details>
 
@@ -476,11 +476,11 @@ function parseISO8601(dateStringInRange) {
 
 ---
 
-### About CSS
+### About Mobile Terminal Development
 
-#### CSS3 -webkit-tap-highlight-color
+#### 通过 CSS3 -webkit-tap-highlight-color 去除默认点击高亮
 
-在移动端开发过程中，发现一个问题：在 webkit 内核浏览器下，当点击一个链接时，其就会出现灰色高亮。
+在移动端开发过程中，发现一个问题：当点击一个链接时，其就会默认出现灰色高亮。
 
 该样式由属性 [`-webkit-tap-highlight-color`](http://www.css88.com/webkit/-webkit-tap-highlight-color) 控制，可通过设置透明度为0禁用该属性：
 
@@ -492,9 +492,9 @@ function parseISO8601(dateStringInRange) {
 
 [Back to TOC](#table-of-contents)
 
-#### CSS3 -webkit-appearance
+#### 通过 CSS3 -webkit-appearance 去除输入框默认内阴影
 
-在移动端开发过程中，发现一个问题：在 webkit 内核浏览器下，input 和 textarea 存在顶部内阴影。
+在移动端开发过程中，发现一个问题：在 iOS 上，input 和 textarea 默认存在顶部内阴影。
 
 该样式由属性 [`-webkit-appearance`](http://www.css88.com/webkit/-webkit-appearance) 控制，可通过设置值为 none 去除该样式：
 
