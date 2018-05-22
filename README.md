@@ -16,6 +16,7 @@ Good good study, day day up.
 
 - [Vuex 使用 commit 提交 mutation 修改 state 的原因](#vuex-使用-commit-提交-mutation-修改-state-的原因)
 - [计算属性比较方法、侦听属性和过滤器](#计算属性比较方法侦听属性和过滤器)
+- [在 vue-cli 项目中使用 Sass](在-vue-cli-项目中使用-sass)
 
 </details>
 
@@ -210,6 +211,65 @@ Vue 使用了基于 HTML 的模板语法，在模板内我们一般只进行简�
 
 [Back to TOC](#table-of-contents)
 
+#### 在 vue-cli 项目中使用 Sass
+
+在写前端样式时，CSS 预处理器可谓是前端开发者的开发利器。个人比较喜欢的是 Sass3 的语法规则 SCSS，以下是在 vue-cli 项目中使用 Sass 的相关配置（均基于 webpack 模板和 SCSS 语法）：
+
+- 配置和使用
+
+以我的个人项目 [cnode-by-vue](https://github.com/FishPlusOrange/cnode-by-vue/blob/master/build/webpack.base.conf.js) 为例：
+
+1. 安装相关依赖 node-sass 和 sass-loader：
+
+```bash
+npm install node-sass sass-loader --save-dev
+```
+
+2. 修改 build/webpack.base.config.js 的相关配置，添加匹配规则和对应 `loaders`：
+
+```javascript
+// 在 module.rules 中添加
+{
+    test: /\.scss$/,
+    loaders: ['style', 'css', 'sass']
+}
+```
+
+3. 在 `<style>` 标签上添加 `lang`，webpack 会根据 `lang` 属性自动推断出要使用的 loader：
+
+```html
+<style lang="scss" scoped></style>
+```
+
+- 全局设置 Sass 文件
+
+开发过程中，我们可能会使用 Sass 定义一些通用样式规则提供全局使用，为了避免在每个组件中使用 `@import` 将其显式引入，我们可以全局设置 Sass 文件。以在我的个人项目 [cnode-by-vue](https://github.com/FishPlusOrange/cnode-by-vue/blob/master/build/utils.js) 中全局设置 variables.scss 文件为例：
+
+1. 安装相关依赖 sass-resources-loader：
+
+```bash
+npm install sass-resources-loader --save-dev
+```
+
+2. 修改 build/utils.js 的相关配置：
+
+```javascript
+// 默认 return
+scss: generateLoaders('sass')
+
+// 修改后 return
+scss: generateLoaders('sass').concat({
+    loader: 'sass-resources-loader',
+    options: {
+        resources: path.resolve(__dirname, '../src/assets/css/variables.scss')
+    }
+})
+```
+
+> 在全局设置的 Sass 文件中，为了避免在最终编译后的文件中出现重复的 CSS，建议只包含变量、Mixin 和自定义函数等。
+
+[Back to TOC](#table-of-contents)
+
 ---
 
 ### About Browser Compatibility
@@ -397,18 +457,18 @@ var date = new Date('1994-04-05'); // NaN
 ```javascript
 var date = new Date(parseISO8601('1994-04-05'));
 
-function parseISO8601(dateStringInRange) {  
-    var isoExp = /^\s*(\d{4})-(\d\d)-(\d\d)\s*$/,  
-        date = new Date(NaN), month,  
-        parts = isoExp.exec(dateStringInRange);  
-    if(parts) {  
-        month = +parts[2];  
-        date.setFullYear(parts[1], month - 1, parts[3]);  
-        if(month != date.getMonth() + 1) {  
-            date.setTime(NaN);  
-        }  
-    }  
-    return date;  
+function parseISO8601(dateStringInRange) {
+    var isoExp = /^\s*(\d{4})-(\d\d)-(\d\d)\s*$/,
+        date = new Date(NaN), month,
+        parts = isoExp.exec(dateStringInRange);
+    if(parts) {
+        month = +parts[2];
+        date.setFullYear(parts[1], month - 1, parts[3]);
+        if(month != date.getMonth() + 1) {
+            date.setTime(NaN);
+        }
+    }
+    return date;
 } 
 ```
 
