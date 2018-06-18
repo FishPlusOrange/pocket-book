@@ -48,8 +48,8 @@ Good good study, day day up.
 
 <summary>View contents</summary>
 
-- [通过 CSS3 -webkit-tap-highlight-color 去除默认点击高亮](https://github.com/FishPlusOrange/pocket-book/issues/13)
-- [通过 CSS3 -webkit-appearance 去除输入框默认内阴影](https://github.com/FishPlusOrange/pocket-book/issues/14)
+- [通过 -webkit-tap-highlight-color 属性去除默认点击高亮](https://github.com/FishPlusOrange/pocket-book/issues/13)
+- [通过 -webkit-appearance 属性去除输入框默认内阴影](https://github.com/FishPlusOrange/pocket-book/issues/14)
 
 </details>
 
