@@ -22,6 +22,8 @@ Good good study, day day up.
 - [Vue 组件之间的通信](https://github.com/FishPlusOrange/pocket-book/issues/17)
 - [Vue 渲染函数](https://github.com/FishPlusOrange/pocket-book/issues/18)
 - [后端接收不到 axios 通过 post 方式传递的参数](https://github.com/FishPlusOrange/pocket-book/issues/20)
+- [Vue 中 el 和 $mount 的区别](https://github.com/FishPlusOrange/pocket-book/issues/24)
+- [从 Vue 后台管理系统项目开发出发](https://github.com/FishPlusOrange/pocket-book/issues/22)
 
 </details>
 
@@ -66,6 +68,7 @@ Good good study, day day up.
 <summary>View contents</summary>
 
 - [再看 animation-fill-mode 属性](https://github.com/FishPlusOrange/pocket-book/issues/15)
+- [webkit 内核浏览器自定义滚动条样式](https://github.com/FishPlusOrange/pocket-book/issues/21)
 
 </details>
 
@@ -78,5 +81,6 @@ Good good study, day day up.
 <summary>View contents</summary>
 
 - [Webpack 常用 loader 和 plugin](https://github.com/FishPlusOrange/pocket-book/issues/19)
+- [webpack 中 hash、chunkhash 和 contenthash 的区别](https://github.com/FishPlusOrange/pocket-book/issues/23)
 
 </details>
