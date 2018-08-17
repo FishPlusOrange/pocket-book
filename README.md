@@ -22,8 +22,9 @@ Good good study, day day up.
 - [Vue 组件之间的通信](https://github.com/FishPlusOrange/pocket-book/issues/17)
 - [Vue 渲染函数](https://github.com/FishPlusOrange/pocket-book/issues/18)
 - [后端接收不到 axios 通过 post 方式传递的参数](https://github.com/FishPlusOrange/pocket-book/issues/20)
-- [Vue 中 el 和 $mount 的区别](https://github.com/FishPlusOrange/pocket-book/issues/24)
 - [从 Vue 后台管理系统项目开发出发](https://github.com/FishPlusOrange/pocket-book/issues/22)
+- [Vue 中 el 和 $mount 的区别](https://github.com/FishPlusOrange/pocket-book/issues/24)
+- [Vue 首屏渲染优化](https://github.com/FishPlusOrange/pocket-book/issues/27)
 
 </details>
 
@@ -82,5 +83,18 @@ Good good study, day day up.
 
 - [Webpack 常用 loader 和 plugin](https://github.com/FishPlusOrange/pocket-book/issues/19)
 - [webpack 中 hash、chunkhash 和 contenthash 的区别](https://github.com/FishPlusOrange/pocket-book/issues/23)
+- [Webpack 打包优化方案](https://github.com/FishPlusOrange/pocket-book/issues/25)
+
+</details>
+
+### About JavaScript
+
+关于 JavaScript。
+
+<details>
+
+<summary>View contents</summary>
+
+- [关于模块化](https://github.com/FishPlusOrange/pocket-book/issues/26)
 
 </details>
