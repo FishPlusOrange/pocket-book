@@ -25,6 +25,7 @@ Good good study, day day up.
 - [从 Vue 后台管理系统项目开发出发](https://github.com/FishPlusOrange/pocket-book/issues/22)
 - [Vue 中 el 和 $mount 的区别](https://github.com/FishPlusOrange/pocket-book/issues/24)
 - [Vue 首屏渲染优化](https://github.com/FishPlusOrange/pocket-book/issues/27)
+- [关于 Vue 实例的生命周期](https://github.com/FishPlusOrange/pocket-book/issues/29)
 
 </details>
 
@@ -96,5 +97,8 @@ Good good study, day day up.
 <summary>View contents</summary>
 
 - [关于模块化](https://github.com/FishPlusOrange/pocket-book/issues/26)
+- [关于异步处理](https://github.com/FishPlusOrange/pocket-book/issues/28)
+- [关于 Axios](https://github.com/FishPlusOrange/pocket-book/issues/30)
+- [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
 
 </details>
