@@ -26,6 +26,7 @@ Good good study, day day up.
 - [Vue 中 el 和 $mount 的区别](https://github.com/FishPlusOrange/pocket-book/issues/24)
 - [Vue 首屏渲染优化](https://github.com/FishPlusOrange/pocket-book/issues/27)
 - [关于 Vue 实例的生命周期](https://github.com/FishPlusOrange/pocket-book/issues/29)
+- [关于 Vue nextTick](https://github.com/FishPlusOrange/pocket-book/issues/34)
 
 </details>
 
@@ -45,6 +46,7 @@ Good good study, day day up.
 - [IE 浏览器下由于请求路径过长导致发送 GET 请求时报500错误](https://github.com/FishPlusOrange/pocket-book/issues/10)
 - [IE 浏览器下 td 边框消失](https://github.com/FishPlusOrange/pocket-book/issues/11)
 - [IE8 浏览器下 new Date('YYYY-MM-DD') 返回 NaN](https://github.com/FishPlusOrange/pocket-book/issues/12)
+- [IE11 浏览器下 babel 编译后的部分 ES6 语法仍然报 undefined 错误](https://github.com/FishPlusOrange/pocket-book/issues/33)
 
 </details>
 
@@ -100,5 +102,7 @@ Good good study, day day up.
 - [关于异步处理](https://github.com/FishPlusOrange/pocket-book/issues/28)
 - [关于 Axios](https://github.com/FishPlusOrange/pocket-book/issues/30)
 - [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
+- [从 Object.prototype.hasOwnProperty() 出发](https://github.com/FishPlusOrange/pocket-book/issues/32)
+- [从 Element.getBoundingClientRect() 出发](https://github.com/FishPlusOrange/pocket-book/issues/35)
 
 </details>
