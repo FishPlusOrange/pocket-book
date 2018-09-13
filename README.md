@@ -27,6 +27,7 @@ Good good study, day day up.
 - [Vue 首屏渲染优化](https://github.com/FishPlusOrange/pocket-book/issues/27)
 - [关于 Vue 实例的生命周期](https://github.com/FishPlusOrange/pocket-book/issues/29)
 - [关于 Vue nextTick](https://github.com/FishPlusOrange/pocket-book/issues/34)
+- [Vue 中懒加载和按需加载](https://github.com/FishPlusOrange/pocket-book/issues/36)
 
 </details>
 
