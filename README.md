@@ -48,6 +48,7 @@ Good good study, day day up.
 - [IE 浏览器下 td 边框消失](https://github.com/FishPlusOrange/pocket-book/issues/11)
 - [IE8 浏览器下 new Date('YYYY-MM-DD') 返回 NaN](https://github.com/FishPlusOrange/pocket-book/issues/12)
 - [IE11 浏览器下 babel 编译后的部分 ES6 语法仍然报 undefined 错误](https://github.com/FishPlusOrange/pocket-book/issues/33)
+- [IE11 浏览器下 get 请求缓存问题](https://github.com/FishPlusOrange/pocket-book/issues/37)
 
 </details>
 
