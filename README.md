@@ -62,6 +62,7 @@ Good good study, day day up.
 
 - [通过 -webkit-tap-highlight-color 属性去除默认点击高亮](https://github.com/FishPlusOrange/pocket-book/issues/13)
 - [通过 -webkit-appearance 属性去除输入框默认内阴影](https://github.com/FishPlusOrange/pocket-book/issues/14)
+- [移动端适配方案](https://github.com/FishPlusOrange/pocket-book/issues/39)
 
 </details>
 
@@ -89,6 +90,7 @@ Good good study, day day up.
 - [Webpack 常用 loader 和 plugin](https://github.com/FishPlusOrange/pocket-book/issues/19)
 - [webpack 中 hash、chunkhash 和 contenthash 的区别](https://github.com/FishPlusOrange/pocket-book/issues/23)
 - [Webpack 打包优化方案](https://github.com/FishPlusOrange/pocket-book/issues/25)
+- [关于 tree shaking](https://github.com/FishPlusOrange/pocket-book/issues/41)
 
 </details>
 
@@ -106,6 +108,18 @@ Good good study, day day up.
 - [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
 - [从 Object.prototype.hasOwnProperty() 出发](https://github.com/FishPlusOrange/pocket-book/issues/32)
 - [从 Element.getBoundingClientRect() 出发](https://github.com/FishPlusOrange/pocket-book/issues/35)
+
+</details>
+
+### About TypeScript
+
+关于 TypeScript。
+
+<details>
+
+<summary>View contents</summary>
+
+- [TypeScript 从入门到放弃](https://github.com/FishPlusOrange/pocket-book/issues/40)
 
 </details>
 
