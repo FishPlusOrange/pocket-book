@@ -22,12 +22,10 @@ Good good study, day day up.
 - [Vue 组件之间的通信](https://github.com/FishPlusOrange/pocket-book/issues/17)
 - [Vue 渲染函数](https://github.com/FishPlusOrange/pocket-book/issues/18)
 - [后端接收不到 axios 通过 post 方式传递的参数](https://github.com/FishPlusOrange/pocket-book/issues/20)
-- [从 Vue 后台管理系统项目开发出发](https://github.com/FishPlusOrange/pocket-book/issues/22)
 - [Vue 中 el 和 $mount 的区别](https://github.com/FishPlusOrange/pocket-book/issues/24)
 - [Vue 首屏渲染优化](https://github.com/FishPlusOrange/pocket-book/issues/27)
 - [关于 Vue 实例的生命周期](https://github.com/FishPlusOrange/pocket-book/issues/29)
 - [关于 Vue nextTick](https://github.com/FishPlusOrange/pocket-book/issues/34)
-- [Vue 中懒加载和按需加载](https://github.com/FishPlusOrange/pocket-book/issues/36)
 
 </details>
 
@@ -60,8 +58,6 @@ Good good study, day day up.
 
 <summary>View contents</summary>
 
-- [通过 -webkit-tap-highlight-color 属性去除默认点击高亮](https://github.com/FishPlusOrange/pocket-book/issues/13)
-- [通过 -webkit-appearance 属性去除输入框默认内阴影](https://github.com/FishPlusOrange/pocket-book/issues/14)
 - [移动端适配方案](https://github.com/FishPlusOrange/pocket-book/issues/39)
 
 </details>
@@ -87,7 +83,6 @@ Good good study, day day up.
 <summary>View contents</summary>
 
 - [webpack 中 hash、chunkhash 和 contenthash 的区别](https://github.com/FishPlusOrange/pocket-book/issues/23)
-- [Webpack 打包优化方案](https://github.com/FishPlusOrange/pocket-book/issues/25)
 - [关于 tree shaking](https://github.com/FishPlusOrange/pocket-book/issues/41)
 
 </details>
@@ -100,23 +95,9 @@ Good good study, day day up.
 
 <summary>View contents</summary>
 
-- [关于模块化](https://github.com/FishPlusOrange/pocket-book/issues/26)
 - [关于异步处理](https://github.com/FishPlusOrange/pocket-book/issues/28)
 - [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
-- [从 Object.prototype.hasOwnProperty() 出发](https://github.com/FishPlusOrange/pocket-book/issues/32)
 - [从 Element.getBoundingClientRect() 出发](https://github.com/FishPlusOrange/pocket-book/issues/35)
 - [检测浏览器 DevTools 是否处于开启状态](https://github.com/FishPlusOrange/pocket-book/issues/42)
-
-</details>
-
-### About Others
-
-关于其他。
-
-<details>
-
-<summary>View contents</summary>
-
-- [关于 ECharts 地图](https://github.com/FishPlusOrange/pocket-book/issues/38)
 
 </details>
