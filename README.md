@@ -1,12 +1,10 @@
 # Pocket Manual
 
-Thinking & Writing
+The place for thinking and writing.
 
 ## Table of Contents
 
 ### About JavaScript
-
-关于 JavaScript。
 
 <details>
 
@@ -21,8 +19,6 @@ Thinking & Writing
 
 ### About CSS
 
-关于 CSS。
-
 <details>
 
 <summary>View contents</summary>
@@ -32,8 +28,6 @@ Thinking & Writing
 </details>
 
 ### About Vue
-
-关于 Vue。
 
 <details>
 
@@ -55,8 +49,6 @@ Thinking & Writing
 
 ### About Webpack
 
-关于 Webpack。
-
 <details>
 
 <summary>View contents</summary>
@@ -67,8 +59,6 @@ Thinking & Writing
 </details>
 
 ### About Others
-
-关于其他。
 
 <details>
 
