@@ -1,8 +1,6 @@
-# Pocket Book
+# Pocket Manual
 
-FishPlusOrange's pocket book. Just for recording.
-
-Good good study, day day up.
+Thinking & Writing
 
 ## Table of Contents
 
