@@ -22,7 +22,6 @@ The place for thinking and writing.
 - [vue-cli 项目中 assets 和 static 的区别](https://github.com/FishPlusOrange/pocket-book/issues/16)
 - [Vue 组件之间的通信](https://github.com/FishPlusOrange/pocket-book/issues/17)
 - [Vue 渲染函数](https://github.com/FishPlusOrange/pocket-book/issues/18)
-- [Vue 中 el 和 $mount 的区别](https://github.com/FishPlusOrange/pocket-book/issues/24)
 - [Vue 首屏渲染优化](https://github.com/FishPlusOrange/pocket-book/issues/27)
 - [关于 Vue 实例的生命周期](https://github.com/FishPlusOrange/pocket-book/issues/29)
 - [关于 Vue nextTick](https://github.com/FishPlusOrange/pocket-book/issues/34)
