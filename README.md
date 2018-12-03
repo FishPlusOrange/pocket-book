@@ -75,7 +75,6 @@ Good good study, day day up.
 <summary>View contents</summary>
 
 - [再看 animation-fill-mode 属性](https://github.com/FishPlusOrange/pocket-book/issues/15)
-- [webkit 内核浏览器自定义滚动条样式](https://github.com/FishPlusOrange/pocket-book/issues/21)
 
 </details>
 
@@ -104,7 +103,6 @@ Good good study, day day up.
 
 - [关于模块化](https://github.com/FishPlusOrange/pocket-book/issues/26)
 - [关于异步处理](https://github.com/FishPlusOrange/pocket-book/issues/28)
-- [关于 Axios](https://github.com/FishPlusOrange/pocket-book/issues/30)
 - [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
 - [从 Object.prototype.hasOwnProperty() 出发](https://github.com/FishPlusOrange/pocket-book/issues/32)
 - [从 Element.getBoundingClientRect() 出发](https://github.com/FishPlusOrange/pocket-book/issues/35)
