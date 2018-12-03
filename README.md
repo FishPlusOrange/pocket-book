@@ -21,7 +21,6 @@ Good good study, day day up.
 - [vue-cli 项目中 assets 和 static 的区别](https://github.com/FishPlusOrange/pocket-book/issues/16)
 - [Vue 组件之间的通信](https://github.com/FishPlusOrange/pocket-book/issues/17)
 - [Vue 渲染函数](https://github.com/FishPlusOrange/pocket-book/issues/18)
-- [后端接收不到 axios 通过 post 方式传递的参数](https://github.com/FishPlusOrange/pocket-book/issues/20)
 - [Vue 中 el 和 $mount 的区别](https://github.com/FishPlusOrange/pocket-book/issues/24)
 - [Vue 首屏渲染优化](https://github.com/FishPlusOrange/pocket-book/issues/27)
 - [关于 Vue 实例的生命周期](https://github.com/FishPlusOrange/pocket-book/issues/29)
@@ -47,18 +46,6 @@ Good good study, day day up.
 - [IE8 浏览器下 new Date('YYYY-MM-DD') 返回 NaN](https://github.com/FishPlusOrange/pocket-book/issues/12)
 - [IE11 浏览器下 babel 编译后的部分 ES6 语法仍然报 undefined 错误](https://github.com/FishPlusOrange/pocket-book/issues/33)
 - [IE11 浏览器下 get 请求缓存问题](https://github.com/FishPlusOrange/pocket-book/issues/37)
-
-</details>
-
-### About Mobile Terminal Development
-
-关于移动端开发。
-
-<details>
-
-<summary>View contents</summary>
-
-- [移动端适配方案](https://github.com/FishPlusOrange/pocket-book/issues/39)
 
 </details>
 
@@ -95,7 +82,7 @@ Good good study, day day up.
 
 <summary>View contents</summary>
 
-- [关于异步处理](https://github.com/FishPlusOrange/pocket-book/issues/28)
+- [后端接收不到 axios 通过 post 方式传递的参数](https://github.com/FishPlusOrange/pocket-book/issues/20)
 - [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
 - [从 Element.getBoundingClientRect() 出发](https://github.com/FishPlusOrange/pocket-book/issues/35)
 - [检测浏览器 DevTools 是否处于开启状态](https://github.com/FishPlusOrange/pocket-book/issues/42)
