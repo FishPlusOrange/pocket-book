@@ -12,7 +12,6 @@ The place for thinking and writing.
 
 - [后端接收不到 axios 通过 post 方式传递的参数](https://github.com/FishPlusOrange/pocket-book/issues/20)
 - [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
-- [从 Element.getBoundingClientRect() 出发](https://github.com/FishPlusOrange/pocket-book/issues/35)
 - [检测浏览器 DevTools 是否处于开启状态](https://github.com/FishPlusOrange/pocket-book/issues/42)
 
 </details>
