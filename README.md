@@ -6,31 +6,15 @@ The place for thinking and writing.
 
 ### JavaScript
 
-<details>
-
-<summary>View contents</summary>
-
 - [后端接收不到 axios 通过 post 方式传递的参数](https://github.com/FishPlusOrange/pocket-book/issues/20)
 - [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
 - [检测浏览器 DevTools 是否处于开启状态](https://github.com/FishPlusOrange/pocket-book/issues/42)
 
-</details>
-
 ### CSS
-
-<details>
-
-<summary>View contents</summary>
 
 - [再看 animation-fill-mode 属性](https://github.com/FishPlusOrange/pocket-book/issues/15)
 
-</details>
-
 ### Vue
-
-<details>
-
-<summary>View contents</summary>
 
 - [计算属性比较方法、侦听属性和过滤器](https://github.com/FishPlusOrange/pocket-book/issues/2)
 - [在 vue-cli 项目中使用 Sass](https://github.com/FishPlusOrange/pocket-book/issues/3)
@@ -43,25 +27,11 @@ The place for thinking and writing.
 - [关于 Vue 实例的生命周期](https://github.com/FishPlusOrange/pocket-book/issues/29)
 - [关于 Vue nextTick](https://github.com/FishPlusOrange/pocket-book/issues/34)
 
-</details>
-
 ### Webpack
-
-<details>
-
-<summary>View contents</summary>
 
 - [webpack 中 hash、chunkhash 和 contenthash 的区别](https://github.com/FishPlusOrange/pocket-book/issues/23)
 - [关于 tree shaking](https://github.com/FishPlusOrange/pocket-book/issues/41)
 
-</details>
-
 ### Others
 
-<details>
-
-<summary>View contents</summary>
-
 - [浏览器兼容性问题汇总](https://github.com/FishPlusOrange/pocket-book/issues/44)
-
-</details>
