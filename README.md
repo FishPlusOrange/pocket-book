@@ -4,7 +4,7 @@ The place for thinking and writing.
 
 ## Table of Contents
 
-### About JavaScript
+### JavaScript
 
 <details>
 
@@ -16,7 +16,7 @@ The place for thinking and writing.
 
 </details>
 
-### About CSS
+### CSS
 
 <details>
 
@@ -26,7 +26,7 @@ The place for thinking and writing.
 
 </details>
 
-### About Vue
+### Vue
 
 <details>
 
@@ -45,7 +45,7 @@ The place for thinking and writing.
 
 </details>
 
-### About Webpack
+### Webpack
 
 <details>
 
@@ -56,7 +56,7 @@ The place for thinking and writing.
 
 </details>
 
-### About Others
+### Others
 
 <details>
 
