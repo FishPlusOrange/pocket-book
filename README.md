@@ -6,6 +6,33 @@ Good good study, day day up.
 
 ## Table of Contents
 
+### About JavaScript
+
+关于 JavaScript。
+
+<details>
+
+<summary>View contents</summary>
+
+- [后端接收不到 axios 通过 post 方式传递的参数](https://github.com/FishPlusOrange/pocket-book/issues/20)
+- [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
+- [从 Element.getBoundingClientRect() 出发](https://github.com/FishPlusOrange/pocket-book/issues/35)
+- [检测浏览器 DevTools 是否处于开启状态](https://github.com/FishPlusOrange/pocket-book/issues/42)
+
+</details>
+
+### About CSS
+
+关于 CSS。
+
+<details>
+
+<summary>View contents</summary>
+
+- [再看 animation-fill-mode 属性](https://github.com/FishPlusOrange/pocket-book/issues/15)
+
+</details>
+
 ### About Vue
 
 关于 Vue。
@@ -28,39 +55,6 @@ Good good study, day day up.
 
 </details>
 
-### About Browser Compatibility
-
-关于浏览器兼容性。
-
-<details>
-
-<summary>View contents</summary>
-
-- [低版本 IE 浏览器下绝对定位的元素未设置背景时无法响应鼠标点击或悬浮事件](https://github.com/FishPlusOrange/pocket-book/issues/5)
-- [IE 浏览器下 iframe 弹窗中输入框光标丢失（无法输入）问题](https://github.com/FishPlusOrange/pocket-book/issues/6)
-- [低版本 IE 浏览器下无法触发 oninput 事件](https://github.com/FishPlusOrange/pocket-book/issues/7)
-- [IE9 浏览器下在拖拽、剪切、删除操作时无法触发 propertychange 事件](https://github.com/FishPlusOrange/pocket-book/issues/8)
-- [IE 浏览器下由于请求路径带中文参数导致发送 GET 请求时报400错误](https://github.com/FishPlusOrange/pocket-book/issues/9)
-- [IE 浏览器下由于请求路径过长导致发送 GET 请求时报500错误](https://github.com/FishPlusOrange/pocket-book/issues/10)
-- [IE 浏览器下 td 边框消失](https://github.com/FishPlusOrange/pocket-book/issues/11)
-- [IE8 浏览器下 new Date('YYYY-MM-DD') 返回 NaN](https://github.com/FishPlusOrange/pocket-book/issues/12)
-- [IE11 浏览器下 babel 编译后的部分 ES6 语法仍然报 undefined 错误](https://github.com/FishPlusOrange/pocket-book/issues/33)
-- [IE11 浏览器下 get 请求缓存问题](https://github.com/FishPlusOrange/pocket-book/issues/37)
-
-</details>
-
-### About CSS
-
-关于 CSS。
-
-<details>
-
-<summary>View contents</summary>
-
-- [再看 animation-fill-mode 属性](https://github.com/FishPlusOrange/pocket-book/issues/15)
-
-</details>
-
 ### About Webpack
 
 关于 Webpack。
@@ -74,17 +68,14 @@ Good good study, day day up.
 
 </details>
 
-### About JavaScript
+### About Others
 
-关于 JavaScript。
+关于其他。
 
 <details>
 
 <summary>View contents</summary>
 
-- [后端接收不到 axios 通过 post 方式传递的参数](https://github.com/FishPlusOrange/pocket-book/issues/20)
-- [babel-polyfill 和 babel-plugin-transform-runtime](https://github.com/FishPlusOrange/pocket-book/issues/31)
-- [从 Element.getBoundingClientRect() 出发](https://github.com/FishPlusOrange/pocket-book/issues/35)
-- [检测浏览器 DevTools 是否处于开启状态](https://github.com/FishPlusOrange/pocket-book/issues/42)
+- [浏览器兼容性问题汇总](https://github.com/FishPlusOrange/pocket-book/issues/44)
 
 </details>
