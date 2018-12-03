@@ -132,5 +132,6 @@ Good good study, day day up.
 <summary>View contents</summary>
 
 - [关于 ECharts 地图](https://github.com/FishPlusOrange/pocket-book/issues/38)
+- [检测浏览器 DevTools 是否处于开启状态](https://github.com/FishPlusOrange/pocket-book/issues/42)
 
 </details>
